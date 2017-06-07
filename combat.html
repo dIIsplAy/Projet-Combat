@@ -748,6 +748,7 @@
             40% {
                 bottom: 68%;
                 left: 90%;
+                /*background-image: url('imagedragon/ddd.png');*/
             }
             45% {
                 left: 75%
@@ -1280,7 +1281,7 @@
         affichage();
 
 
-
+        // fonction affichage
         function affichage() {
             hpy.innerHTML = mega.hp;
             hpr.innerHTML = zero.hp;
@@ -1295,13 +1296,13 @@
             attspey.innerHTML = mega.attspe;
             attsper.innerHTML = zero.attspe;
         };
-
+        // fonction deffence 
         function defplus() {
             attaquant.def += 6;
             affichage();
             turnround();
         }
-
+        // fonction heal
         function healplus() {
             attaquant.hp += 22;
             if (attaquant.hp >= 100) {
@@ -1310,7 +1311,7 @@
             affichage();
             turnround();
         }
-
+        // fonction force 
         function forceplus() {
             attaquant.att1 += 4;
             attaquant.attspe += 2;
@@ -1320,7 +1321,7 @@
 
 
         }
-
+        // fonction att basique 
         function attaque() {
             let degat = attaquant['att1'] - cible.def;
             cible.hp -= degat;
@@ -1340,7 +1341,7 @@
             turnround();
         };
 
-
+        // fonction att spe
         function attaquespe() {
             if (attaquant.energy >= 60) {
 
